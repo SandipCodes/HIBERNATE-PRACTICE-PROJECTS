@@ -1,0 +1,4 @@
+com\app\test\SaveObjectTest.class
+com\app\test\LoadObjectTest.class
+com\app\entity\BankAccount.class
+com\app\utils\HibernateUtil.class
