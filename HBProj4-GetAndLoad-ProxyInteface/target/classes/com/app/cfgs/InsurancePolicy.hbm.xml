@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+	 <hibernate-mapping>
+	   
+	    <class name="com.app.entity.InsurancePolicy" table="insurance_policy" lazy="true" proxy="com.app.entity.IPolicy">
+	  
+	     <id name="policyId" type="int" column="policy_id">
+	         <generator class="assigned"></generator>
+	     </id>
+	   
+	     <property name="policyName" type="string" column="policy_name" not-null="true"/>
+	     <property name="policyHolderName" type="string" column="policy_hldr_name" />
+	     <property name="tenure"  type="int"  column="tenure" length="2"></property>
+	     <property name="aadharNo" type="long" column="aadharNo" length="12" unique="true"></property>
+	    </class>
+	   
+	 </hibernate-mapping>

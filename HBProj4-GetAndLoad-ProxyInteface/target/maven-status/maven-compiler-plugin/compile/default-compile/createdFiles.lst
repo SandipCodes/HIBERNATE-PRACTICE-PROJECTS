@@ -1,0 +1,5 @@
+com\app\test\SaveObjectTest.class
+com\app\entity\IPolicy.class
+com\app\test\LoadObjectTest.class
+com\app\test\GetObjectTest.class
+com\app\entity\InsurancePolicy.class
