@@ -1,0 +1,3 @@
+com\app\model\Person.class
+com\app\test\GetObjectTest.class
+com\app\test\SaveObjectTest.class
