@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+	 <class name="com.app.entity.Student">
+	    <!-- <id name="id">
+	      <generator class="org.hibernate.id.Assigned" />
+	      <generator class="assigned" />
+	    </id> -->
+	   <!--  <id name="id">
+	      <generator class="increment" />
+	    </id> -->
+	    <!-- <id name="id">
+          <generator class="identity" />   
+	    </id>
+	     -->
+	     
+	    <!-- <id name="id">
+	        <generator class="sequence" />
+	     -->
+	    
+	    <!-- <id name="id">
+	       <generator class="sequence" >
+	          <param name="sequence_name">stu_seq</param>
+	        </generator>
+	         
+	    </id> -->
+	     <!-- <id name="id">
+	        <generator class="hilo" />
+	      </id> -->
+	      <id name="id">
+	        <generator class="seqhilo">
+	           <param name="max_lo">10</param>
+	         </generator>
+	      </id>
+	      
+	<!--       <id  name="id">
+	         <generator class="seqhilo">
+	           <param name="sequence">stu_seq</param>
+	           <param name="max_lo">5</param>
+	         </generator>
+	      </id> -->
+	    <!-- 
+	    <id name="id">
+	       <generator class="native" />
+	      </id> -->
+	      <!-- 
+	      <id name="id">
+	         <generator class="native">
+	           <param name="sequence">stu_seq</param>
+	         </generator>
+	      </id> -->
+	      
+	    <!-- <id name="id">
+	       <generator class="select">
+	           <param name="key">email</param>
+	       </generator>
+	    </id> -->
+	    <property name="name" />
+	    <property name="email" />
+	    <property name="city" />
+	 </class>
+	
+	</hibernate-mapping>
