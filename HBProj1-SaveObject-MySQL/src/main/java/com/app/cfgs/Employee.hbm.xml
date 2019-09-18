@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+	
+	  <class name="com.app.entity.Employee" table="EMPLOYEE">
+	    <id name="id" type="int" column="eid" >
+	       <generator class="assigned" />
+	    </id>
+	    <property name="ename" type="string" column="ENAME" length="25"/>
+	    <property name="email" type="string" column="EMAIL" not-null="true" length="30" unique="true" />
+        <property name="salary" type="int" column="SALARY" length="6"/>
+ 	  
+	  </class>
+	
+	</hibernate-mapping>
