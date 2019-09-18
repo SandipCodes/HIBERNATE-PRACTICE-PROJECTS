@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+	<hibernate-configuration>
+	   <session-factory>
+	   
+	      <!-- Connection Properties MYSQL -->
+	   
+	      <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	      <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test2</property>
+	      <property name="hibernate.connection.username">root</property>
+	      <property name="hibernate.connection.password">root</property>
+	      <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	      
+	        <!-- Connection Properties ORACLE -->
+	      <!--  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+	      <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+	      <property name="hibernate.connection.username">sandip</property>
+	      <property name="hibernate.connection.password">sandip</property>
+	      <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property> -->
+	      
+	      <property name="sql_show">true</property>
+	      <property name="format_sql">true</property>
+	      <property name="hibernate.hbm2ddl.auto">update</property>
+	      <property name="connection.pool_size">3</property>
+	      
+	      <!-- Disabling the 2nd level cache -->
+	      <property name="cache.provider_class">org.hibernate.cache>NoCacheProvider</property>
+	   
+	   <mapping class="com.app.entity.StockInfo"/>
+	 <!--   <mapping class="com.app.entity.BankAccount"/> -->
+	   </session-factory>
+	
+	
+	</hibernate-configuration>
